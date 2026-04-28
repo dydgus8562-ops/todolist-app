@@ -308,11 +308,11 @@ graph TD
 
 #### 완료 조건
 
-- [ ] `todolist_dev` 데이터베이스가 PostgreSQL에 정상 존재함
-- [ ] `todolist_user` 계정으로 `todolist_dev`에 접속 및 DDL 실행이 가능함
-- [ ] `.env` 파일에 DB 접속 정보 7개 항목이 모두 기록됨
-- [ ] `.env`가 `.gitignore`에 명시되어 버전 관리에서 제외됨
-- [ ] `.env.example`에 실제 비밀 값 없이 키만 존재함
+- [x] `todolist_dev` 데이터베이스가 PostgreSQL에 정상 존재함
+- [x] `todolist_user` 계정으로 `todolist_dev`에 접속 및 DDL 실행이 가능함
+- [x] `.env` 파일에 DB 접속 정보 7개 항목이 모두 기록됨
+- [x] `.env`가 `.gitignore`에 명시되어 버전 관리에서 제외됨
+- [x] `.env.example`에 실제 비밀 값 없이 키만 존재함
 
 ---
 
@@ -347,11 +347,11 @@ graph TD
 
 #### 완료 조건
 
-- [ ] `todolist_dev`에 `users`, `categories`, `tasks` 3개 테이블이 모두 존재함
-- [ ] `information_schema.table_constraints` 조회 시 PK 3개, UNIQUE 2개, CHECK 1개 확인됨
-- [ ] FK 3개가 ON DELETE 정책(CASCADE / SET NULL)과 함께 존재함
-- [ ] `pg_indexes` 조회 시 6개 인덱스 모두 존재, Partial Index 확인됨
-- [ ] `schema.sql`을 2회 연속 실행해도 오류 없이 성공함 (DROP IF EXISTS 보장)
+- [x] `todolist_dev`에 `users`, `categories`, `tasks` 3개 테이블이 모두 존재함
+- [x] `information_schema.table_constraints` 조회 시 PK 3개, UNIQUE 2개, CHECK 1개 확인됨
+- [x] FK 3개가 ON DELETE 정책(CASCADE / SET NULL)과 함께 존재함
+- [x] `pg_indexes` 조회 시 6개 인덱스 모두 존재, Partial Index 확인됨
+- [x] `schema.sql`을 2회 연속 실행해도 오류 없이 성공함 (DROP IF EXISTS 보장)
 
 ---
 
@@ -381,11 +381,11 @@ graph TD
 
 #### 완료 조건
 
-- [ ] `seed.sql` 실행 후 `users` 2행, `categories` 3행, `tasks` 10행 존재함
-- [ ] `status = 'PENDING' AND due_date < NOW()` 조건으로 3건 이상 반환됨
-- [ ] `category_id IS NULL` 조건으로 2건 이상 반환됨
-- [ ] `seed.sql`을 2회 연속 실행해도 UNIQUE 위반 없이 성공함 (ON CONFLICT 처리)
-- [ ] 두 사용자의 데이터가 서로의 `user_id`를 침범하지 않음 (BR-09)
+- [x] `seed.sql` 실행 후 `users` 2행, `categories` 3행, `tasks` 10행 존재함
+- [x] `status = 'PENDING' AND due_date < NOW()` 조건으로 3건 이상 반환됨
+- [x] `category_id IS NULL` 조건으로 2건 이상 반환됨
+- [x] `seed.sql`을 2회 연속 실행해도 UNIQUE 위반 없이 성공함 (ON CONFLICT 처리)
+- [x] 두 사용자의 데이터가 서로의 `user_id`를 침범하지 않음 (BR-09)
 
 ---
 
@@ -414,11 +414,11 @@ graph TD
 
 #### 완료 조건
 
-- [ ] `npm run db:test` 실행 시 현재 UTC 시각이 출력되고 정상 종료됨
-- [ ] 잘못된 DB 접속 정보 설정 시 명확한 오류 메시지와 함께 `exit(1)` 종료됨
-- [ ] `pool.js`가 `query`, `getClient`, `pool` 3가지를 export함
-- [ ] Pool 설정에 `max`, `idleTimeoutMillis`, `connectionTimeoutMillis`가 환경변수에서 읽힘
-- [ ] `pool.js` 내 하드코딩된 DB 접속 정보가 없음
+- [x] `npm run db:test` 실행 시 현재 UTC 시각이 출력되고 정상 종료됨
+- [x] 잘못된 DB 접속 정보 설정 시 명확한 오류 메시지와 함께 `exit(1)` 종료됨
+- [x] `pool.js`가 `query`, `getClient`, `pool` 3가지를 export함
+- [x] Pool 설정에 `max`, `idleTimeoutMillis`, `connectionTimeoutMillis`가 환경변수에서 읽힘
+- [x] `pool.js` 내 하드코딩된 DB 접속 정보가 없음
 
 ---
 
@@ -444,11 +444,11 @@ graph TD
 
 #### 완료 조건
 
-- [ ] `database/` 아래 `reset.sql`, `schema.sql`, `seed.sql` 3개 파일 존재
-- [ ] `reset.sql` 실행 시 3개 테이블 삭제, 오류 없음
-- [ ] `package.json`에 4개 스크립트 정의됨
-- [ ] `db:migrate` 실행 시 DB 초기화 + 시드 데이터 10건 자동 삽입됨
-- [ ] `db:migrate` 2회 연속 실행해도 오류 없음 (멱등성 보장)
+- [x] `database/` 아래 `reset.sql`, `schema.sql`, `seed.sql` 3개 파일 존재
+- [x] `reset.sql` 실행 시 3개 테이블 삭제, 오류 없음
+- [x] `package.json`에 4개 스크립트 정의됨
+- [x] `db:migrate` 실행 시 DB 초기화 + 시드 데이터 10건 자동 삽입됨
+- [x] `db:migrate` 2회 연속 실행해도 오류 없음 (멱등성 보장)
 
 ---
 
