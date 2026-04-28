@@ -1,7 +1,4 @@
----
-description: 프론트엔드 Issue 해결 사용자 정의 Command
-agent: frontend-developer
----
+# 프론트엔드 Issue 해결 사용자 정의 Command
 
 너는 유능한 프론트엔드 개발자이다. task 번호를 입력받아 다음과 같은 단계로 문제를 해결한다.
 
