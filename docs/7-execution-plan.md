@@ -171,18 +171,18 @@ graph TD
 
 | ID | 태스크 | 예상 소요 | 의존성 | 완료 |
 |----|--------|----------|--------|------|
-| FE-01 | 프로젝트 초기 세팅 (Vite + React 19 + Tailwind) | 0.5h | 없음 | - |
-| FE-02 | API 클라이언트 (axios 인스턴스 + 인터셉터) | 0.5h | FE-01 | - |
-| FE-03 | 인증 스토어 (Zustand authStore) | 0.5h | FE-01 | - |
-| FE-04 | 인증 TanStack Query 훅 | 0.5h | FE-02, FE-03 | - |
-| FE-05 | 로그인·회원가입 페이지 | 1.5h | FE-04, FE-11 | - |
-| FE-06 | 라우팅 및 인증 가드 (PrivateRoute) | 0.5h | FE-03, FE-05 | - |
-| FE-07 | 레이아웃 컴포넌트 (Header, Sidebar, MainContent) | 1.5h | FE-06, FE-11 | - |
-| FE-08 | 카테고리 관리 UI | 1.5h | FE-02, FE-07 | - |
-| FE-09 | 할일 목록 페이지 (필터, 상태 배지) | 2h | FE-07, FE-08, FE-11 | - |
-| FE-10 | 할일 CRUD UI (생성·수정·삭제·완료 토글) | 2h | FE-09, FE-11 | - |
-| FE-11 | 공통 컴포넌트 (Button, Input, Modal, Badge 등) | 1.5h | FE-01 | - |
-| FE-12 | 반응형 UI 검증 (375px / 768px / 1280px) | 1h | FE-05, FE-07~FE-10 | - |
+| FE-01 | 프로젝트 초기 세팅 (Vite + React 19 + Tailwind) | 0.5h | 없음 | [x] |
+| FE-02 | API 클라이언트 (axios 인스턴스 + 인터셉터) | 0.5h | FE-01 | [x] |
+| FE-03 | 인증 스토어 (Zustand authStore) | 0.5h | FE-01 | [x] |
+| FE-04 | 인증 TanStack Query 훅 | 0.5h | FE-02, FE-03 | [x] |
+| FE-05 | 로그인·회원가입 페이지 | 1.5h | FE-04, FE-11 | [x] |
+| FE-06 | 라우팅 및 인증 가드 (PrivateRoute) | 0.5h | FE-03, FE-05 | [x] |
+| FE-07 | 레이아웃 컴포넌트 (Header, Sidebar, MainContent) | 1.5h | FE-06, FE-11 | [x] |
+| FE-08 | 카테고리 관리 UI | 1.5h | FE-02, FE-07 | [x] |
+| FE-09 | 할일 목록 페이지 (필터, 상태 배지) | 2h | FE-07, FE-08, FE-11 | [x] |
+| FE-10 | 할일 CRUD UI (생성·수정·삭제·완료 토글) | 2h | FE-09, FE-11 | [x] |
+| FE-11 | 공통 컴포넌트 (Button, Input, Modal, Badge 등) | 1.5h | FE-01 | [x] |
+| FE-12 | 반응형 UI 검증 (375px / 768px / 1280px) | 1h | FE-05, FE-07~FE-10 | [x] |
 | | **소계** | **13h** | | |
 
 ---
@@ -263,13 +263,13 @@ graph TD
 | **합계** | | | **10.5h** |
 
 **Day 3 완료 기준:**
-- [ ] `PATCH /api/tasks/:id/complete` → DB `COMPLETED` 저장, 응답 `status: COMPLETED` 확인
-- [ ] `PATCH /api/tasks/:id/reopen` (마감일 과거 할일) → 응답 `status: OVERDUE` 확인 (BR-06)
-- [ ] 이메일 형식 오류 시 `400 VALIDATION_ERROR` 반환 확인 (BR-10)
-- [ ] 비밀번호 복잡도 미달 시 `400 VALIDATION_ERROR` 반환 확인 (BR-11)
-- [ ] 모든 에러 응답이 `{ success: false, error: { code, message } }` 형식 준수
-- [ ] 브라우저에서 할일 CRUD 전체 흐름 동작 확인
-- [ ] OVERDUE 할일 빨간색 강조, COMPLETED 할일 취소선 표시 확인
+- [x] `PATCH /api/tasks/:id/complete` → DB `COMPLETED` 저장, 응답 `status: COMPLETED` 확인
+- [x] `PATCH /api/tasks/:id/reopen` (마감일 과거 할일) → 응답 `status: OVERDUE` 확인 (BR-06)
+- [x] 이메일 형식 오류 시 `400 VALIDATION_ERROR` 반환 확인 (BR-10)
+- [x] 비밀번호 복잡도 미달 시 `400 VALIDATION_ERROR` 반환 확인 (BR-11)
+- [x] 모든 에러 응답이 `{ success: false, error: { code, message } }` 형식 준수
+- [x] 브라우저에서 할일 CRUD 전체 흐름 동작 확인
+- [x] OVERDUE 할일 빨간색 강조, COMPLETED 할일 취소선 표시 확인
 - [ ] 모바일(375px) 레이아웃 정상 확인
 
 ---
@@ -804,21 +804,21 @@ graph TD
 
 #### 작업 체크리스트
 
-- [ ] `npm create vite@latest frontend -- --template react`
-- [ ] 필수 패키지 설치: `@tanstack/react-query`, `zustand`, `react-router-dom`, `axios`
-- [ ] Tailwind CSS v3 설치 및 `tailwind.config.js`, `postcss.config.js` 설정
-- [ ] `src/` 하위 디렉토리 생성: `api/`, `components/`, `pages/`, `hooks/`, `store/`, `utils/`, `constants/`, `styles/`
-- [ ] `styles/index.css`에 Tailwind 디렉티브 추가
-- [ ] `main.jsx`에 `QueryClientProvider`, `BrowserRouter` 래핑 설정
-- [ ] Vite 경로 별칭 `@/` → `src/` 설정 (`vite.config.js`)
-- [ ] `.env.example` 생성 (`VITE_API_BASE_URL`)
-- [ ] 불필요한 Vite 기본 파일 정리
+- [x] `npm create vite@latest frontend -- --template react`
+- [x] 필수 패키지 설치: `@tanstack/react-query`, `zustand`, `react-router-dom`, `axios`
+- [x] Tailwind CSS v3 설치 및 `tailwind.config.js`, `postcss.config.js` 설정
+- [x] `src/` 하위 디렉토리 생성: `api/`, `components/`, `pages/`, `hooks/`, `store/`, `utils/`, `constants/`, `styles/`
+- [x] `styles/index.css`에 Tailwind 디렉티브 추가
+- [x] `main.jsx`에 `QueryClientProvider`, `BrowserRouter` 래핑 설정
+- [x] Vite 경로 별칭 `@/` → `src/` 설정 (`vite.config.js`)
+- [x] `.env.example` 생성 (`VITE_API_BASE_URL`)
+- [x] 불필요한 Vite 기본 파일 정리
 
 #### 완료 조건
 
-- [ ] `npm run dev` 실행 시 브라우저에서 빈 앱 정상 렌더링됨
-- [ ] Tailwind 유틸리티 클래스가 빌드 결과에 정상 포함됨
-- [ ] 환경 변수로 API Base URL이 분리됨
+- [x] `npm run dev` 실행 시 브라우저에서 빈 앱 정상 렌더링됨
+- [x] Tailwind 유틸리티 클래스가 빌드 결과에 정상 포함됨
+- [x] 환경 변수로 API Base URL이 분리됨
 
 ---
 
@@ -831,19 +831,19 @@ graph TD
 
 #### 작업 체크리스트
 
-- [ ] `src/api/index.js`: axios 인스턴스 생성 (`baseURL`, `timeout`)
-- [ ] 요청 인터셉터: `localStorage`에서 토큰 읽어 `Authorization: Bearer` 헤더 자동 첨부
-- [ ] 응답 인터셉터: 401 수신 시 토큰 제거 → `/login` 리다이렉트, 403은 reject 전달
-- [ ] `src/api/auth.js`: `loginUser`, `registerUser`, `getMe`
-- [ ] `src/api/categories.js`: `getCategories`, `createCategory`, `updateCategory`, `deleteCategory`
-- [ ] `src/api/tasks.js`: `getTasks`, `createTask`, `updateTask`, `deleteTask`, `completeTask`, `uncompleteTask`
-- [ ] 각 API 함수에서 `response.data`만 반환
+- [x] `src/api/index.js`: axios 인스턴스 생성 (`baseURL`, `timeout`)
+- [x] 요청 인터셉터: `localStorage`에서 토큰 읽어 `Authorization: Bearer` 헤더 자동 첨부
+- [x] 응답 인터셉터: 401 수신 시 토큰 제거 → `/login` 리다이렉트, 403은 reject 전달
+- [x] `src/api/auth.js`: `loginUser`, `registerUser`, `getMe`
+- [x] `src/api/categories.js`: `getCategories`, `createCategory`, `updateCategory`, `deleteCategory`
+- [x] `src/api/tasks.js`: `getTasks`, `createTask`, `updateTask`, `deleteTask`, `completeTask`, `uncompleteTask`
+- [x] 각 API 함수에서 `response.data`만 반환
 
 #### 완료 조건
 
-- [ ] 토큰 있을 때 모든 요청에 `Authorization` 헤더가 자동 포함됨
-- [ ] 401 응답 수신 시 `/login`으로 자동 이동됨
-- [ ] API 함수 호출 시 불필요한 `.data` 체이닝 없이 데이터 사용 가능
+- [x] 토큰 있을 때 모든 요청에 `Authorization` 헤더가 자동 포함됨
+- [x] 401 응답 수신 시 `/login`으로 자동 이동됨
+- [x] API 함수 호출 시 불필요한 `.data` 체이닝 없이 데이터 사용 가능
 
 ---
 
@@ -856,18 +856,18 @@ graph TD
 
 #### 작업 체크리스트
 
-- [ ] `src/store/authStore.js` 생성
-- [ ] 상태: `token`(string|null), `user`(object|null), `isAuthenticated`(boolean)
-- [ ] `login(token, user)`: 상태 업데이트 + `localStorage.setItem`
-- [ ] `logout()`: 상태 초기화 + `localStorage.removeItem`
-- [ ] `setUser(user)`: 유저 정보 업데이트
-- [ ] 초기화 시 `localStorage.getItem('token')`으로 기존 토큰 복원
+- [x] `src/store/authStore.js` 생성
+- [x] 상태: `token`(string|null), `user`(object|null), `isAuthenticated`(boolean)
+- [x] `login(token, user)`: 상태 업데이트 + `localStorage.setItem`
+- [x] `logout()`: 상태 초기화 + `localStorage.removeItem`
+- [x] `setUser(user)`: 유저 정보 업데이트
+- [x] 초기화 시 `localStorage.getItem('token')`으로 기존 토큰 복원
 
 #### 완료 조건
 
-- [ ] 페이지 새로고침 후에도 로그인 상태 유지됨
-- [ ] `logout()` 후 스토어와 `localStorage` 모두 초기화됨
-- [ ] 여러 컴포넌트에서 `useAuthStore()` 훅으로 동일 상태 공유 가능
+- [x] 페이지 새로고침 후에도 로그인 상태 유지됨
+- [x] `logout()` 후 스토어와 `localStorage` 모두 초기화됨
+- [x] 여러 컴포넌트에서 `useAuthStore()` 훅으로 동일 상태 공유 가능
 
 ---
 
@@ -880,19 +880,19 @@ graph TD
 
 #### 작업 체크리스트
 
-- [ ] `src/hooks/useAuth.js` 생성
-- [ ] `useLogin()`: `useMutation` → 성공 시 `authStore.login()` + `/` 네비게이트
-- [ ] `useRegister()`: `useMutation` → 성공 시 `/login` 네비게이트
-- [ ] `useMe()`: `useQuery` → `enabled: isAuthenticated`, 성공 시 `authStore.setUser()`
-- [ ] `useLogout()`: `authStore.logout()` + `queryClient.clear()` + `/login` 네비게이트
-- [ ] `onError`에서 서버 응답 에러 메시지 파싱하여 반환
+- [x] `src/hooks/useAuth.js` 생성
+- [x] `useLogin()`: `useMutation` → 성공 시 `authStore.login()` + `/` 네비게이트
+- [x] `useRegister()`: `useMutation` → 성공 시 `/login` 네비게이트
+- [x] `useMe()`: `useQuery` → `enabled: isAuthenticated`, 성공 시 `authStore.setUser()`
+- [x] `useLogout()`: `authStore.logout()` + `queryClient.clear()` + `/login` 네비게이트
+- [x] `onError`에서 서버 응답 에러 메시지 파싱하여 반환
 
 #### 완료 조건
 
-- [ ] 로그인 성공 시 메인 페이지(`/`)로 자동 이동됨
-- [ ] 회원가입 성공 시 로그인 페이지(`/login`)로 자동 이동됨
-- [ ] 인증 상태에서 앱 로드 시 `useMe`가 자동으로 유저 정보 갱신함
-- [ ] 로그아웃 후 TanStack Query 캐시가 초기화됨
+- [x] 로그인 성공 시 메인 페이지(`/`)로 자동 이동됨
+- [x] 회원가입 성공 시 로그인 페이지(`/login`)로 자동 이동됨
+- [x] 인증 상태에서 앱 로드 시 `useMe`가 자동으로 유저 정보 갱신함
+- [x] 로그아웃 후 TanStack Query 캐시가 초기화됨
 
 ---
 
@@ -905,28 +905,28 @@ graph TD
 
 #### 작업 체크리스트
 
-- [ ] `src/pages/LoginPage.jsx` 생성
-  - [ ] 이메일·비밀번호 입력 필드 (공통 `Input` 컴포넌트)
-  - [ ] 이메일 형식·비밀번호 최소 8자 유효성 검사
-  - [ ] `useLogin()` 뮤테이션 호출
-  - [ ] 로딩 중 버튼 `disabled` + 스피너
-  - [ ] 서버 에러 메시지 폼 하단 빨간 텍스트로 표시
-  - [ ] "회원가입" 링크 (`/register`)
-- [ ] `src/pages/RegisterPage.jsx` 생성
-  - [ ] 이메일·비밀번호·비밀번호 확인 입력 필드
-  - [ ] 비밀번호 복잡도 + 비밀번호 확인 일치 검사 (FR-AUTH-03)
-  - [ ] `useRegister()` 뮤테이션 호출
-  - [ ] 서버 에러 메시지 표시
-  - [ ] "로그인" 링크 (`/login`)
-- [ ] 이미 로그인 상태에서 `/login` 접근 시 `/` 리다이렉트
+- [x] `src/pages/LoginPage.jsx` 생성
+  - [x] 이메일·비밀번호 입력 필드 (공통 `Input` 컴포넌트)
+  - [x] 이메일 형식·비밀번호 최소 8자 유효성 검사
+  - [x] `useLogin()` 뮤테이션 호출
+  - [x] 로딩 중 버튼 `disabled` + 스피너
+  - [x] 서버 에러 메시지 폼 하단 빨간 텍스트로 표시
+  - [x] "회원가입" 링크 (`/register`)
+- [x] `src/pages/RegisterPage.jsx` 생성
+  - [x] 이메일·비밀번호·비밀번호 확인 입력 필드
+  - [x] 비밀번호 복잡도 + 비밀번호 확인 일치 검사 (FR-AUTH-03)
+  - [x] `useRegister()` 뮤테이션 호출
+  - [x] 서버 에러 메시지 표시
+  - [x] "로그인" 링크 (`/login`)
+- [x] 이미 로그인 상태에서 `/login` 접근 시 `/` 리다이렉트
 
 #### 완료 조건
 
-- [ ] 유효하지 않은 이메일 형식 시 필드 에러 메시지 표시됨
-- [ ] 비밀번호 조건 미충족 시 에러 메시지 표시됨
-- [ ] 서버 에러(이메일 중복, 잘못된 인증 정보)가 UI에 노출됨
-- [ ] 로딩 중 중복 제출 방지됨
-- [ ] 모바일(375px)에서 폼이 정상 표시됨
+- [x] 유효하지 않은 이메일 형식 시 필드 에러 메시지 표시됨
+- [x] 비밀번호 조건 미충족 시 에러 메시지 표시됨
+- [x] 서버 에러(이메일 중복, 잘못된 인증 정보)가 UI에 노출됨
+- [x] 로딩 중 중복 제출 방지됨
+- [x] 모바일(375px)에서 폼이 정상 표시됨
 
 ---
 
@@ -939,20 +939,20 @@ graph TD
 
 #### 작업 체크리스트
 
-- [ ] `src/components/PrivateRoute.jsx`: `isAuthenticated`가 false면 `<Navigate to="/login" replace />`
-- [ ] `src/App.jsx`에 `<Routes>` 설정
-  - [ ] `/login` → `<LoginPage />`
-  - [ ] `/register` → `<RegisterPage />`
-  - [ ] `/`, `/tasks` → `<PrivateRoute>` + `<TasksPage />`
-  - [ ] 미정의 경로 → `/` 리다이렉트
-- [ ] `src/constants/routes.js`: `ROUTES.LOGIN`, `ROUTES.REGISTER`, `ROUTES.TASKS`
+- [x] `src/components/PrivateRoute.jsx`: `isAuthenticated`가 false면 `<Navigate to="/login" replace />`
+- [x] `src/App.jsx`에 `<Routes>` 설정
+  - [x] `/login` → `<LoginPage />`
+  - [x] `/register` → `<RegisterPage />`
+  - [x] `/`, `/tasks` → `<PrivateRoute>` + `<TasksPage />`
+  - [x] 미정의 경로 → `/` 리다이렉트
+- [x] `src/constants/routes.js`: `ROUTES.LOGIN`, `ROUTES.REGISTER`, `ROUTES.TASKS`
 
 #### 완료 조건
 
-- [ ] 비인증 상태에서 `/` 접근 시 `/login`으로 이동됨
-- [ ] 인증 상태에서 `/login` 접근 시 `/`로 이동됨
-- [ ] 로그아웃 후 `/` 접근 시 `/login`으로 이동됨
-- [ ] 존재하지 않는 경로 접근 시 `/`로 이동됨
+- [x] 비인증 상태에서 `/` 접근 시 `/login`으로 이동됨
+- [x] 인증 상태에서 `/login` 접근 시 `/`로 이동됨
+- [x] 로그아웃 후 `/` 접근 시 `/login`으로 이동됨
+- [x] 존재하지 않는 경로 접근 시 `/`로 이동됨
 
 ---
 
@@ -965,24 +965,24 @@ graph TD
 
 #### 작업 체크리스트
 
-- [ ] `src/components/layout/AppLayout.jsx`: 전체 페이지 래퍼
-- [ ] `src/components/layout/Header.jsx`
-  - [ ] 좌측: 앱 이름/로고, 우측: 로그인 사용자 이메일 + 로그아웃 버튼
-  - [ ] 로그아웃 버튼 클릭 시 `useLogout()` 호출
-- [ ] `src/components/layout/Sidebar.jsx`
-  - [ ] 카테고리 목록 렌더링 영역 (FE-08 연동)
-  - [ ] 상태 필터 버튼: 전체 / PENDING / COMPLETED / OVERDUE
-  - [ ] 현재 선택된 필터 active 스타일
-  - [ ] 모바일 사이드바 토글 버튼 및 오버레이
-- [ ] `src/components/layout/MainContent.jsx`: 할일 목록 영역 래퍼
-- [ ] Tailwind 반응형: 모바일 세로 스택, `md:` 이상 수평 배치
+- [x] `src/components/layout/AppLayout.jsx`: 전체 페이지 래퍼
+- [x] `src/components/layout/Header.jsx`
+  - [x] 좌측: 앱 이름/로고, 우측: 로그인 사용자 이메일 + 로그아웃 버튼
+  - [x] 로그아웃 버튼 클릭 시 `useLogout()` 호출
+- [x] `src/components/layout/Sidebar.jsx`
+  - [x] 카테고리 목록 렌더링 영역 (FE-08 연동)
+  - [x] 상태 필터 버튼: 전체 / PENDING / COMPLETED / OVERDUE
+  - [x] 현재 선택된 필터 active 스타일
+  - [x] 모바일 사이드바 토글 버튼 및 오버레이
+- [x] `src/components/layout/MainContent.jsx`: 할일 목록 영역 래퍼
+- [x] Tailwind 반응형: 모바일 세로 스택, `md:` 이상 수평 배치
 
 #### 완료 조건
 
-- [ ] 데스크탑(1280px)에서 사이드바와 메인 영역이 나란히 배치됨
-- [ ] 모바일(375px)에서 레이아웃 깨짐 없이 표시됨
-- [ ] 로그아웃 버튼 동작 정상
-- [ ] 필터 선택 시 선택된 항목이 시각적으로 구분됨
+- [x] 데스크탑(1280px)에서 사이드바와 메인 영역이 나란히 배치됨
+- [x] 모바일(375px)에서 레이아웃 깨짐 없이 표시됨
+- [x] 로그아웃 버튼 동작 정상
+- [x] 필터 선택 시 선택된 항목이 시각적으로 구분됨
 
 ---
 
@@ -995,22 +995,22 @@ graph TD
 
 #### 작업 체크리스트
 
-- [ ] `src/hooks/useCategories.js` 생성
-  - [ ] `useGetCategories()`: `useQuery(['categories'])`
-  - [ ] `useCreateCategory()`, `useUpdateCategory()`, `useDeleteCategory()`: 성공 시 `['categories']` 무효화
-- [ ] `src/components/category/CategoryList.jsx`: 카테고리 목록 렌더링
-- [ ] `src/components/category/CategoryItem.jsx`
-  - [ ] 이름 표시, 클릭 시 카테고리 필터 적용
-  - [ ] 수정 아이콘 → 인라인 편집 모드, 삭제 아이콘 → 확인 다이얼로그
-- [ ] `src/components/category/AddCategoryForm.jsx`: 이름 입력 후 엔터/버튼으로 생성
-- [ ] 이름 중복 시 서버 에러 메시지 표시 (FR-CAT-02)
+- [x] `src/hooks/useCategories.js` 생성
+  - [x] `useGetCategories()`: `useQuery(['categories'])`
+  - [x] `useCreateCategory()`, `useUpdateCategory()`, `useDeleteCategory()`: 성공 시 `['categories']` 무효화
+- [x] `src/components/category/CategoryList.jsx`: 카테고리 목록 렌더링
+- [x] `src/components/category/CategoryItem.jsx`
+  - [x] 이름 표시, 클릭 시 카테고리 필터 적용
+  - [x] 수정 아이콘 → 인라인 편집 모드, 삭제 아이콘 → 확인 다이얼로그
+- [x] `src/components/category/AddCategoryForm.jsx`: 이름 입력 후 엔터/버튼으로 생성
+- [x] 이름 중복 시 서버 에러 메시지 표시 (FR-CAT-02)
 
 #### 완료 조건
 
-- [ ] 카테고리 생성 후 사이드바 목록이 즉시 갱신됨
-- [ ] 카테고리 수정 후 목록에 반영됨
-- [ ] 카테고리 삭제 후 목록에서 제거되고 해당 필터 자동 해제됨
-- [ ] 중복 이름 입력 시 에러 메시지 표시됨
+- [x] 카테고리 생성 후 사이드바 목록이 즉시 갱신됨
+- [x] 카테고리 수정 후 목록에 반영됨
+- [x] 카테고리 삭제 후 목록에서 제거되고 해당 필터 자동 해제됨
+- [x] 중복 이름 입력 시 에러 메시지 표시됨
 
 ---
 
