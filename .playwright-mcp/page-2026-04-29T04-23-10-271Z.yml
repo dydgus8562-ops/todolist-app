@@ -1,0 +1,33 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - navigation [ref=e6]:
+      - link "Uizard Designed in Uizard" [ref=e8] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e9]:
+          - img "Uizard" [ref=e10]
+          - generic [ref=e11]: Designed in Uizard
+      - button "Use this template" [ref=e13] [cursor=pointer]:
+        - generic [ref=e15]: Use this template
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - generic:
+          - generic [ref=e20] [cursor=pointer]: v3_minimize
+          - generic [ref=e22] [cursor=pointer]: Close
+      - generic [ref=e27]:
+        - generic [ref=e29]:
+          - img [ref=e30]
+          - generic [ref=e31]:
+            - generic [ref=e32]:
+              - generic [ref=e34]: Preview
+              - generic [ref=e36]: This product design preview works like a real app - just scroll through the screens and click on the core elements.
+            - button "Got it" [ref=e38] [cursor=pointer]:
+              - generic [ref=e40]: Got it
+            - generic [ref=e42] [cursor=pointer]: Don’t show this again
+        - generic [ref=e51]:
+          - paragraph [ref=e57]: Organic Mind
+          - paragraph [ref=e61]: Productive Mind
+          - generic [ref=e65]: Get Started
+          - paragraph [ref=e67]: With only the features you need, Organic Mind is customized for individuals seeking a stress-free way to stay focused on their goals, projects, and tasks.
+          - paragraph [ref=e69]: Already have an account? Sign in
+  - iframe [ref=e71]:
+    

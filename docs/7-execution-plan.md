@@ -159,12 +159,12 @@ graph TD
 | BE-03 | DB 연결 모듈 (pg Pool) | 0.5h | BE-02, DB-04 | - |
 | BE-04 | 공통 미들웨어 (CORS, 로깅, 에러핸들러) | 1h | BE-02 | - |
 | BE-05 | JWT 인증 미들웨어 | 1h | BE-04 | - |
-| BE-06 | 인증 API (register / login / logout / me) | 2h | BE-05, BE-03 | - |
-| BE-07 | 카테고리 API (CRUD 4개) | 1.5h | BE-05, BE-03 | - |
-| BE-08 | 할일 API — 기본 CRUD | 2h | BE-07 | - |
-| BE-09 | 할일 API — 상태 처리 (complete / reopen / OVERDUE) | 1.5h | BE-08 | - |
-| BE-10 | 입력 검증 레이어 | 1.5h | BE-06, BE-07, BE-08 | - |
-| BE-11 | 에러 처리 표준화 | 1h | BE-04, BE-06~BE-10 | - |
+| BE-06 | 인증 API (register / login / logout / me) | 2h | BE-05, BE-03 | [x] |
+| BE-07 | 카테고리 API (CRUD 4개) | 1.5h | BE-05, BE-03 | [x] |
+| BE-08 | 할일 API — 기본 CRUD | 2h | BE-07 | [x] |
+| BE-09 | 할일 API — 상태 처리 (complete / reopen / OVERDUE) | 1.5h | BE-08 | [x] |
+| BE-10 | 입력 검증 레이어 | 1.5h | BE-06, BE-07, BE-08 | [x] |
+| BE-11 | 에러 처리 표준화 | 1h | BE-04, BE-06~BE-10 | [x] |
 | | **소계** | **13h** | | |
 
 ### 프론트엔드

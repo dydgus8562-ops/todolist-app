@@ -7,19 +7,21 @@ import { dirname } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const envPath = path.resolve(__dirname, '.env');
+const envPath = path.resolve(__dirname, '../../.env');
 
 if (fs.existsSync(envPath)) {
     const envContent = fs.readFileSync(envPath, 'utf-8');
     const lines = envContent.split('\n');
-    
+
     for (const line of lines) {
         const trimmed = line.trim();
         if (trimmed && !trimmed.startsWith('#')) {
             const [key, ...valueParts] = trimmed.split('=');
-            const value = valueParts.join('=');
-            if (key && value !== undefined) {
-                process.env[key.trim()] = value.trim();
+            const envKey = key?.trim();
+            const envValue = valueParts.join('=').trim();
+            // 이미 설정된 환경변수는 덮어쓰지 않음 (CLI/테스트 주입값 우선)
+            if (envKey && envValue !== undefined && !(envKey in process.env)) {
+                process.env[envKey] = envValue;
             }
         }
     }
