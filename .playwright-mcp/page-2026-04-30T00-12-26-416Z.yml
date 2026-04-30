@@ -1,0 +1,65 @@
+- generic [ref=e16]:
+  - banner [ref=e17]:
+    - generic [ref=e18]:
+      - button "메뉴" [ref=e19] [cursor=pointer]:
+        - img [ref=e20]
+      - generic [ref=e22]: TodoList
+    - generic [ref=e23]:
+      - generic [ref=e24]: chulsu.kim@startup.com
+      - button "다크 모드로 변경" [ref=e25] [cursor=pointer]:
+        - img [ref=e26]
+      - button "언어 선택" [ref=e29] [cursor=pointer]:
+        - generic [ref=e30]: 한국어
+        - img [ref=e31]
+      - button "로그아웃" [ref=e33] [cursor=pointer]
+  - generic [ref=e34]:
+    - complementary [ref=e35]:
+      - generic [ref=e36]:
+        - generic [ref=e37]: 메뉴
+        - button "메뉴 닫기" [ref=e38] [cursor=pointer]:
+          - img [ref=e39]
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - heading "카테고리" [level=2] [ref=e43]
+          - generic [ref=e44]:
+            - list [ref=e45]:
+              - listitem [ref=e75]:
+                - button "개인" [ref=e77] [cursor=pointer]
+              - listitem [ref=e72]:
+                - button "업무" [ref=e74] [cursor=pointer]
+            - generic [ref=e47]:
+              - generic [ref=e48]:
+                - textbox "새 카테고리 이름" [ref=e49]:
+                  - /placeholder: 새 카테고리...
+                  - text: 업무
+                - button "카테고리 추가" [ref=e50] [cursor=pointer]: +
+              - paragraph [ref=e78]: Category name already exists
+        - generic [ref=e51]:
+          - heading "전체" [level=2] [ref=e52]
+          - list [ref=e53]:
+            - listitem [ref=e54]:
+              - button "전체" [ref=e55] [cursor=pointer]
+            - listitem [ref=e56]:
+              - button "대기중" [ref=e57] [cursor=pointer]
+            - listitem [ref=e58]:
+              - button "완료" [ref=e59] [cursor=pointer]
+            - listitem [ref=e60]:
+              - button "기한 초과" [ref=e61] [cursor=pointer]
+    - main [ref=e62]:
+      - generic [ref=e63]:
+        - heading "할일 목록" [level=1] [ref=e64]
+        - button "+ 새로운 할일 추가" [ref=e65] [cursor=pointer]
+      - generic [ref=e103]:
+        - generic [ref=e104]:
+          - checkbox [ref=e105] [cursor=pointer]
+          - generic [ref=e106]:
+            - generic [ref=e107]:
+              - heading "주간 장보기" [level=3] [ref=e108]
+              - generic [ref=e109]: 대기중
+            - paragraph [ref=e110]: 우유, 계란, 채소 구입
+            - generic [ref=e111]:
+              - generic [ref=e112]: 업무
+              - generic [ref=e113]: 📅 2026. 05. 02.
+        - generic [ref=e114]:
+          - button "수정" [ref=e115] [cursor=pointer]
+          - button "삭제" [ref=e116] [cursor=pointer]

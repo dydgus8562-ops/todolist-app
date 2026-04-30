@@ -1,0 +1,107 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e288]:
+    - banner [ref=e289]:
+      - generic [ref=e290]:
+        - button "메뉴" [ref=e291] [cursor=pointer]:
+          - img [ref=e292]
+        - generic [ref=e294]: TodoList
+      - generic [ref=e295]:
+        - generic [ref=e296]: chulsu.kim@startup.com
+        - button "다크 모드로 변경" [ref=e297] [cursor=pointer]:
+          - img [ref=e298]
+        - generic [ref=e300]:
+          - button "언어 선택" [expanded] [ref=e301] [cursor=pointer]:
+            - generic [ref=e302]: 한국어
+            - img [ref=e303]
+          - generic [ref=e410]:
+            - button "한국어" [ref=e411] [cursor=pointer]
+            - button "English" [ref=e412] [cursor=pointer]
+            - button "日本語" [ref=e413] [cursor=pointer]
+        - button "로그아웃" [ref=e305] [cursor=pointer]
+    - generic [ref=e306]:
+      - complementary [ref=e307]:
+        - generic [ref=e308]:
+          - generic [ref=e309]: 메뉴
+          - button "메뉴 닫기" [ref=e310] [cursor=pointer]:
+            - img [ref=e311]
+        - generic [ref=e313]:
+          - generic [ref=e314]:
+            - heading "카테고리" [level=2] [ref=e315]
+            - generic [ref=e316]:
+              - list [ref=e317]:
+                - listitem [ref=e318]:
+                  - button "개인" [ref=e320] [cursor=pointer]
+                - listitem [ref=e321]:
+                  - button "업무" [ref=e323] [cursor=pointer]
+              - generic [ref=e325]:
+                - textbox "새 카테고리 이름" [ref=e326]:
+                  - /placeholder: 새 카테고리...
+                - button "카테고리 추가" [ref=e327] [cursor=pointer]: +
+          - generic [ref=e328]:
+            - heading "전체" [level=2] [ref=e329]
+            - list [ref=e330]:
+              - listitem [ref=e331]:
+                - button "전체" [ref=e332] [cursor=pointer]
+              - listitem [ref=e333]:
+                - button "대기중" [ref=e334] [cursor=pointer]
+              - listitem [ref=e335]:
+                - button "완료" [ref=e336] [cursor=pointer]
+              - listitem [ref=e337]:
+                - button "기한 초과" [ref=e338] [cursor=pointer]
+      - main [ref=e339]:
+        - generic [ref=e340]:
+          - heading "할일 목록" [level=1] [ref=e383]
+          - button "+ 새로운 할일 추가" [ref=e343] [cursor=pointer]
+        - generic [ref=e345]:
+          - generic [ref=e397]:
+            - generic [ref=e398]:
+              - checkbox [ref=e399] [cursor=pointer]
+              - generic [ref=e400]:
+                - generic [ref=e401]:
+                  - heading "코드 리뷰 프로세스 개선" [level=3] [ref=e402]
+                  - generic [ref=e403]: 대기중
+                - paragraph [ref=e404]: 팀의 피드백을 반영하여 가이드 문서 작성
+                - generic [ref=e406]: 업무
+            - generic [ref=e407]:
+              - button "수정" [ref=e408] [cursor=pointer]
+              - button "삭제" [ref=e409] [cursor=pointer]
+          - generic [ref=e346]:
+            - generic [ref=e347]:
+              - checkbox [checked] [ref=e348] [cursor=pointer]
+              - generic [ref=e349]:
+                - generic [ref=e350]:
+                  - heading "주간 장보기" [level=3] [ref=e351]
+                  - generic [ref=e352]: 완료
+                - paragraph [ref=e353]: 우유, 계란, 채소, 과일 구입
+                - generic [ref=e354]:
+                  - generic [ref=e355]: 업무
+                  - generic [ref=e356]: 📅 2026. 05. 03.
+            - generic [ref=e357]:
+              - button "수정" [ref=e358] [cursor=pointer]
+              - button "삭제" [ref=e359] [cursor=pointer]
+  - dialog "새 할일 추가" [ref=e426]:
+    - generic [ref=e427]:
+      - generic [ref=e428]:
+        - heading "새 할일 추가" [level=2] [ref=e429]
+        - button "닫기" [ref=e430] [cursor=pointer]:
+          - img [ref=e431]
+      - generic [ref=e433]:
+        - generic [ref=e434]:
+          - generic [ref=e435]: 제목 *
+          - textbox "제목 *" [ref=e436]:
+            - /placeholder: 할일 제목을 입력하세요
+        - generic [ref=e437]:
+          - generic [ref=e438]: 상세 설명
+          - textbox "상세 설명을 입력하세요 (선택)" [ref=e439]
+        - generic [ref=e440]:
+          - generic [ref=e441]: 카테고리
+          - combobox [ref=e442]:
+            - option "미분류" [selected]
+            - option "개인"
+            - option "업무"
+        - generic [ref=e443]:
+          - generic [ref=e444]: 종료일
+          - textbox "종료일" [ref=e445]
+        - generic [ref=e446]:
+          - button "취소" [ref=e447] [cursor=pointer]
+          - button "생성하기" [ref=e448] [cursor=pointer]

@@ -1,0 +1,24 @@
+- generic [ref=e4]:
+  - heading "회원가입" [level=1] [ref=e5]
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: 이메일 *
+      - textbox "이메일 *" [ref=e9]:
+        - /placeholder: user@example.com
+        - text: chulsu.kim@startup.com
+    - generic [ref=e10]:
+      - generic [ref=e11]: 비밀번호 *
+      - textbox "비밀번호 *" [ref=e12]:
+        - /placeholder: 영문, 숫자, 특수문자 포함 8자 이상
+        - text: NewPass456!
+    - generic [ref=e13]:
+      - generic [ref=e14]: 비밀번호 확인 *
+      - textbox "비밀번호 확인 *" [ref=e15]:
+        - /placeholder: 비밀번호를 다시 입력하세요
+        - text: NewPass456!
+    - paragraph [ref=e19]: Email already in use
+    - button "회원가입" [ref=e16] [cursor=pointer]
+  - paragraph [ref=e17]:
+    - text: 이미 계정이 있으신가요?
+    - link "로그인으로 이동" [ref=e18] [cursor=pointer]:
+      - /url: /login
